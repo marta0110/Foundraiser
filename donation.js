@@ -70,3 +70,4 @@ console.log(localStorage);
 function logOut (){
     window.localStorage.clear();
 };
+
