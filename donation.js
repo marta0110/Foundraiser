@@ -30,10 +30,7 @@ function addItem (){
         console.log(d);
     })
 
-
-
 }
-
 
         function getAllDonations() {
             fetch(endpoint)
