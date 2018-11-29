@@ -1,7 +1,6 @@
 if(localStorage.getItem('name')){
     window.location='donation.html'
-}
-
+} 
 
 
 
@@ -21,14 +20,14 @@ function checkLogin(username){
     .then(data=>{
         //console.log(data)
         if(data.length == 0){
+			  document.querySelector(".wrong_data").textContent= "Please insert correct data";
             //something is wrong
         } else {
  
             localStorage.setItem('name', data[0].username);
             localStorage.setItem('avatar', data[0].avatar);
             localStorage.setItem('id', data[0].id);
-            window.location='index.html'
-
-        }
-    })
+            window.location='login.html';
+	 
+    }})
 }
