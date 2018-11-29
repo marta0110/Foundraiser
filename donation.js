@@ -62,6 +62,15 @@ console.log(localStorage);
     
   document.querySelector('#UserName').textContent = "Hi " + UserName;
     
+<<<<<<< HEAD
   document.getElementById('img').setAttribute("src", UserImage)
+=======
+  document.getElementById('img').setAttribute("src", UserImage);
+>>>>>>> e387acbbbdaabc50efd0c6d595b0bb0461cba22e
 
 }
+
+
+function logOut (){
+    window.localStorage.clear();
+};
