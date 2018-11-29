@@ -52,11 +52,16 @@ function addItem (){
         }
 
 function setHeader() {
-  var UserName = localStorage.getItem('name');
-  var UserImage = localStorage.getItem('avatar');
+  var UserName = localStorage.name;
+  var UserImage = localStorage.avatar;
 
-
-  document.querySelector('#UserName').value = UserName;
-  document.getElementById('img').value = UserImage;
+console.log(localStorage);
+    console.log(localStorage.name);
+        console.log(localStorage.avatar);
+    
+    
+  document.querySelector('#UserName').textContent = UserName;
+    
+  document.getElementById('img').src = UserImage;
 
 }
