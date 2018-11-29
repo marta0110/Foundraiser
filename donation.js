@@ -60,8 +60,9 @@ console.log(localStorage);
         console.log(localStorage.avatar);
     
     
-  document.querySelector('#UserName').textContent = UserName;
-    
+  document.querySelector('#UserName').textContent = "Hi " + UserName;
+
+  document.getElementById('img').setAttribute("src", UserImage)
   document.getElementById('img').setAttribute("src", UserImage);
 
 }
@@ -69,5 +70,9 @@ console.log(localStorage);
 
 function logOut (){
     window.localStorage.clear();
+	window.location='login.html'
 };
+
+
+
 
