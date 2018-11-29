@@ -6,47 +6,55 @@ const addDonation = document.querySelector("#addNewDonation");
 getAllDonations();
 
 addDonation.addEventListener("submit", e => {
-            e.preventDefault();
-            addItem();
-        });
+    e.preventDefault();
+    addItem();
+});
 
 //sending data to database
-function addItem (){
+function addItem() {
     const payload = {
-        firstname: addDonation.elements.firstname.value,
-        lastname: addDonation.elements.lastname.value,
+    
         amount: addDonation.elements.amount.value,
     };
     fetch(endpoint, {
-        method :"post",
-        body: JSON.stringify(payload),
-        headers: {
-            Accept : "application/json",
-            "Content-Type":"application/json"
-        }
-    })
-    .then(res => res.json())
-    .then(d => {
-        console.log(d);
-    })
+            method: "post",
+            body: JSON.stringify(payload),
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            }
+        })
+        .then(res => res.json())
+        .then(d => {
+            console.log(d);
+        })
 
 }
 
-        function getAllDonations() {
-            fetch(endpoint)
-                .then(res => res.json())
-                .then(showAllDonations)
-        }
+function getAllDonations() {
+    fetch(endpoint)
+        .then(res => res.json())
+        .then(showAllDonations)
+}
 
-        function showAllDonations(items) {
-            items.forEach(showSingleDonation)
-        }
+function showAllDonations(items) {
+    items.forEach(showSingleDonation)
+}
 
-        function showSingleDonation(item) {
-            const clone = template.cloneNode(true);
-            clone.querySelector("h1").textContent = item.firstname;
-            clone.querySelector("h2").textContent = item.lastname;
-            clone.querySelector("p").textContent = item.amount;
-            root.appendChild(clone);
+function showSingleDonation(item) {
+    const clone = template.cloneNode(true);
 
-        }
+    clone.querySelector("p").textContent = item.amount;
+    root.appendChild(clone);
+
+}
+
+
+
+function setHeader() {
+    const UserName = localStorage.getItem('name');
+    const UserPicture = localStorage.getItem('avatar');
+
+    document.getElementById('name').value= UserName;
+
+};
