@@ -4,6 +4,7 @@ const root = document.querySelector("main");
 const addDonation = document.querySelector("#addNewDonation");
 
 getAllDonations();
+setHeader();
 
 addDonation.addEventListener("submit", e => {
     e.preventDefault();
@@ -53,8 +54,7 @@ function showSingleDonation(item) {
 
 function setHeader() {
     const UserName = localStorage.getItem('name');
-    const UserPicture = localStorage.getItem('avatar');
-
-    document.getElementById('name').value= UserName;
+  
+    document.getElementById('UserName').value= UserName;
 
 };
