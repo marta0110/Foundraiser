@@ -4,6 +4,7 @@ const root = document.querySelector("main");
 const addDonation = document.querySelector("#addNewDonation");
 
 getAllDonations();
+setHeader();
 
 addDonation.addEventListener("submit", e => {
             e.preventDefault();
@@ -29,9 +30,6 @@ function addItem (){
     .then(d => {
         console.log(d);
     })
-
-
-
 }
 
 
@@ -47,9 +45,18 @@ function addItem (){
 
         function showSingleDonation(item) {
             const clone = template.cloneNode(true);
-            clone.querySelector("h1").textContent = item.firstname;
-            clone.querySelector("h2").textContent = item.lastname;
+          
             clone.querySelector("p").textContent = item.amount;
             root.appendChild(clone);
 
         }
+
+function setHeader() {
+  var UserName = localStorage.getItem('name');
+  var UserImage = localStorage.getItem('avatar');
+
+
+  document.querySelector('#UserName').value = UserName;
+  document.getElementById('img').value = UserImage;
+
+}

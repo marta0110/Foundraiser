@@ -1,5 +1,5 @@
 if(localStorage.getItem('name')){
-    window.location='index.html'
+    window.location='donation.html'
 }
 
 
