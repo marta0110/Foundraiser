@@ -62,6 +62,11 @@ console.log(localStorage);
     
   document.querySelector('#UserName').textContent = UserName;
     
-  document.getElementById('img').src = UserImage;
+  document.getElementById('img').setAttribute("src", UserImage);
 
 }
+
+
+function logOut (){
+    window.localStorage.clear();
+};
