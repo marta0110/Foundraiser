@@ -76,6 +76,8 @@ function checkLogin(username){
         } else {
  
             localStorage.setItem('name', data[0].username);
+			 localStorage.setItem('FName', data[0].FName);
+			 localStorage.setItem('LName', data[0].LName);
             localStorage.setItem('avatar', data[0].avatar);
             localStorage.setItem('id', data[0].id);
             window.location='login.html';

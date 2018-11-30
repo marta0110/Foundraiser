@@ -11,13 +11,22 @@ addDonation.addEventListener("submit", e => {
             addItem();
         });
 
+
+//LOCAL STORAGE
+
+console.log(localStorage.FName);
+console.log(localStorage.LName);
+    
+
 //sending data to database
 function addItem (){
     const payload = {
-        firstname: addDonation.elements.firstname.value,
-        lastname: addDonation.elements.lastname.value,
+        firstname: localStorage.FName,
+		lastname: localStorage.LName,
         amount: addDonation.elements.amount.value,
     };
+	
+
     fetch(endpoint, {
         method :"post",
         body: JSON.stringify(payload),
@@ -29,6 +38,8 @@ function addItem (){
     .then(res => res.json())
     .then(d => {
         console.log(d);
+		console.log(d.firstname)
+		console.log(payload)
     })
 }
 
