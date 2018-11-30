@@ -8,7 +8,10 @@ setHeader();
 
 addDonation.addEventListener("submit", e => {
             e.preventDefault();
-            addItem();
+			addItem();
+	
+//add a date to local storage
+  localStorage.setItem("date", new Date());
         });
 
 
@@ -23,7 +26,9 @@ function addItem (){
     const payload = {
         firstname: localStorage.FName,
 		lastname: localStorage.LName,
+		time: localStorage.date,
         amount: addDonation.elements.amount.value,
+		
     };
 	
 
