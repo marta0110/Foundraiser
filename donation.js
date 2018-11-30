@@ -26,7 +26,7 @@ function addItem (){
     const payload = {
         firstname: localStorage.FName,
 		lastname: localStorage.LName,
-		time: localStorage.date,
+		date: localStorage.date,
         amount: addDonation.elements.amount.value,
 		
     };
