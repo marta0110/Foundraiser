@@ -17,53 +17,6 @@ loginform.addEventListener('submit',(e)=>{
 	checkLogin(user, password)
 })
 
-// register form -register new user
-const registerbutton = document.querySelector('#registerbutton')
-const registerform = document.querySelector('.register-form');
-
-
-registerform.addEventListener("submit", e => {
-            e.preventDefault();
-            addNewUser();
-        });
-
-//sending data to database
-function  addNewUser(){
-    const payload = {
-        username: addNewUser.elements.username.value,
-    };
-	
-  fetch(endpoint, {
-        method :"post",
-        body: JSON.stringify(payload),
-        headers: {
-            Accept : "application/json",
-            "Content-Type":"application/json"
-        }
-    })
-    .then(res => res.json())
-    .then(d => {
-        console.log(d);
-    })
-}
-   function getAllUsers() {
-            fetch(endpoint)
-                .then(res => res.json())
-                .then(showAllUsers)
-        }
-
-        function showAllUsers(users) {
-            users.forEach(showSingleUser)
-        }
-
-        function showSingleUser(users) {
-            const clone = template.cloneNode(true);
-          
-            clone.querySelector("p").textContent = users.username;
-            root.appendChild(clone);
-
-        }
-
 
 
 // login form
