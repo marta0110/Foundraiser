@@ -11,7 +11,9 @@ loginform.addEventListener('submit',(e)=>{
     const user = loginform.elements.username.value;
     console.log(user)
     checkLogin(user)
-    
+ const password = loginform.elements.password.value;
+	 console.log(password)
+	checkPassword(password)
 })
 
 // register form
@@ -69,7 +71,7 @@ function checkLogin(username){
     fetch('https://5bff9c6d0296210013dc7df1.mockapi.io/api/v1/users?search='+username)
     .then(res=>res.json())
     .then(data=>{
-        //console.log(data)
+        console.log(data)
         if(data.length == 0){
 			  document.querySelector(".wrong_data").textContent= "Please insert correct data";
             //something is wrong
@@ -84,6 +86,24 @@ function checkLogin(username){
 	 
     }})
 }
+
+
+function checkPassword(password){
+    fetch('https://5bff9c6d0296210013dc7df1.mockapi.io/api/v1/users?search='+password)
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data)
+        if(data.length == 0){
+			  document.querySelector(".wrong_data").textContent= "Please insert correct data";
+            //something is wrong
+        } else {
+ 
+             window.location='login.html';
+	 
+    }})
+}
+
+
 
 
 
