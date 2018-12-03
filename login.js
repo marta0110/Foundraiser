@@ -16,7 +16,7 @@ loginform.addEventListener('submit',(e)=>{
 	checkPassword(password)
 })
 
-// register form
+// register form -register new user
 const registerbutton = document.querySelector('#registerbutton')
 const registerform = document.querySelector('.register-form');
 
@@ -65,7 +65,7 @@ function  addNewUser(){
 
 
 
-
+// login form
 
 function checkLogin(username){
     fetch('https://5bff9c6d0296210013dc7df1.mockapi.io/api/v1/users?search='+username)
@@ -87,6 +87,8 @@ function checkLogin(username){
     }})
 }
 
+
+ //to fix
 
 function checkPassword(password){
     fetch('https://5bff9c6d0296210013dc7df1.mockapi.io/api/v1/users?search='+password)
