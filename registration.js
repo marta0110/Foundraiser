@@ -15,7 +15,8 @@ function  addNewUser(){
         LName: registerform.elements.LName.value,
         username: registerform.elements.username.value,
         password: registerform.elements.password.value,
-        email: registerform.elements.email.value
+        email: registerform.elements.email.value,
+		avatar: registerform.elements.pic.value,
 
     };
 	
@@ -49,3 +50,39 @@ function  addNewUser(){
             root.appendChild(clone);
 
         }
+
+
+
+/// user already exists
+
+registerform.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    const ExistingUser = registerform.elements.username.value;
+    console.log(ExistingUser)
+	checkUser();
+	
+
+
+function checkUser(ExistingUser){
+
+	fetch('https://5bff9c6d0296210013dc7df1.mockapi.io/api/v1/users?search=' + username)
+    .then(res=>res.json())
+    .then(data=>{
+        console.log("lala")
+        if(data.username == username){
+			 console.log(data)
+			   console.log("lala2")
+			 
+document.querySelector(".wrong_username").textContent= "This user already exists";
+ 
+        } 
+      
+    })
+}})
+
+
+
+
+
+
+
