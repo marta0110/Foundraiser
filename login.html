@@ -9,49 +9,51 @@
 
 <body>
     <div class="login">
-       <div class="form">
-        <form class="register-form">
-            <input id="name" type="text" placeholder="user name">
-            <input id="pw" type="password" placeholder="password">
-            <input  type="text" placeholder="email id">
-            <button id='registerbutton' onClick="addNewUser()"> Create </button>
-            <p class="message"> Already registered? <a href="#"> Login</a></p>
-        </form>
-        
-                <form class="login-form">
-            <input id="user_name" type="text" name='username' placeholder="user name">
-            <input  id="user_pw" type="password" name='password' placeholder="password">
-            <div class="wrong_data"></div>
-<button id='loginbutton'> Login  </button> 
-            <p class="message"> Not registered? <a href="#">Register</a></p>
-        </form>
-        
-         </div>
+        <div class="form">
+            <form class="register-form">
+                <input id="firstname" type="text" placeholder="first name">
+                <input id="lastname" type="text" placeholder="last name">
+                <input id="username" type="text" placeholder="username">
+                <input id="pw" type="password" placeholder="password">
+                <input type="text" placeholder="email id">
+                <button id='registerbutton' onClick="addNewUser()"> Create </button>
+                <p class="message"> Already registered? <a href="#"> Login</a></p>
+            </form>
+
+            <form class="login-form">
+                <input id="user_name" type="text" name='username' placeholder="user name">
+                <input id="user_pw" type="password" name='password' placeholder="password">
+                <div class="wrong_data"></div>
+                <button id='loginbutton'> Login </button>
+                <p class="message"> Not registered? <a href="#">Register</a></p>
+            </form>
+
+        </div>
 
     </div>
-    
-    
-      <ul id="statuslist"></ul>
+
+
+    <ul id="statuslist"></ul>
 
     <ul id="userlist"></ul>
 
     <template id="userinfo">
-      <li data-id="userid">
-        <span data-username="name">NAME</span> 
-         <span data-password="password">password</span> 
-  
-      </li>
+        <li data-id="userid">
+            <span data-username="name">NAME</span>
+            <span data-password="password">password</span>
+
+        </li>
     </template>
-    
+
     <p> lalalala</p>
 
-  
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!--<script src="script.js"></script>-->
-<script src="login.js"></script>
-<script src="Userlist.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!--<script src="script.js"></script>-->
+    <script src="login.js"></script>
+    <script src="Userlist.js"></script>
 
 </body>
 
