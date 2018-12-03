@@ -68,8 +68,8 @@ function addItem (){
         }
 
 function setHeader() {
-  var UserName = localStorage.name;
-  var UserImage = localStorage.avatar;
+  const UserName = localStorage.name;
+  const UserImage = localStorage.avatar;
 
 console.log(localStorage);
     console.log(localStorage.name);
