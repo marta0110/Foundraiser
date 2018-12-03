@@ -15,7 +15,9 @@ function  addNewUser(){
         LName: registerform.elements.LName.value,
         username: registerform.elements.username.value,
         password: registerform.elements.password.value,
-        email: registerform.elements.email.value
+        email: registerform.elements.email.value,
+        avatar: registerform.elements.pic.accept
+        
 
     };
 	
