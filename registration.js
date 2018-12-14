@@ -10,18 +10,15 @@ registerform.addEventListener("submit", e => {
 
 //sending data to database
 function  addNewUser(){
+
+// here add the check Existing user as a condition if the username doesn't exist, then execute the following, else alert message
     const payload = {
         FName: registerform.elements.FName.value,
         LName: registerform.elements.LName.value,
         username: registerform.elements.username.value,
         password: registerform.elements.password.value,
         email: registerform.elements.email.value,
-<<<<<<< HEAD
-		avatar: registerform.elements.pic.value,
-=======
-        avatar: registerform.elements.pic.accept
-        
->>>>>>> 97fcf689607d6c8a850dd52fb7d3c03a6a6cc447
+		avatar: registerform.elements.pic.accept,
 
     };
 	
@@ -63,7 +60,7 @@ function  addNewUser(){
 registerform.addEventListener('submit',(e)=>{
     e.preventDefault()
     const ExistingUser = registerform.elements.username.value;
-    console.log(ExistingUser)
+    console.log("user" ,ExistingUser)
 	checkUser();
 	
 
@@ -78,7 +75,7 @@ function checkUser(ExistingUser){
 			 console.log(data)
 			   console.log("lala2")
 			 
-document.querySelector(".wrong_username").textContent= "This user already exists";
+document.querySelector(".wrong_username").textContent= "This username already exists";
  
         } 
       
