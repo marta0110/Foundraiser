@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:700|Noto+Serif+SC|Raleway" rel="stylesheet">
+	<title>Document</title>
+</head>
+
+<body class="donation_system">
+	<div class="step_1">
+		<div class="container">
+			<img src="images/logo_white.png" alt="logo">
+			<h3> Make a contribution </h3>
+			<p>When you make a contribution, you support the vulnerable part of Copenhagen. They need our protection and help.</p>
+			<button type="button" class="button_one_payment">Give a one-off payment</button>
+			<button type="button"> Login </button>
+			<button type="button"> Sign up</button>
+		</div>
+		<div class="donation_img">
+			<img src="images/login_bg_img.png" class="stretch" alt="lakes" />
+		</div>
+	</div>
+	<div class="container_one_payment" style="display: none">
+		<div class="nav">
+			<img src="images/logo_white.png" alt="logo">
+			<p> Give a one-off payment now</p>
+		</div>
+		<h3> I want to donate</h3>
+		<h4> Step 1. Choose the amount</h4>
+		<div class="donation_amount">
+			<label><input type="radio" name="month_type" value="donation_type_month"> Fixed monthly membership fee</label>
+
+			<label><input type="radio" name="single_type" value="donation_type_single"> It's a single contribution</label>
+			<div class="enter_amount">
+				<img src="images/donate.png" alt="donate">
+				<input type="text" name="amount" placeholder="enter emount" required>
+				<p> dkk</p>
+
+			</div>
+		</div>
+		<h4> Step 2. Choose the payment method</h4>
+		<div class="card_details"> 
+		 <label><input type="radio" name="sub_type" value="Credit Card"> Credit Card</label>
+                    <div class="card_visa">
+                        <img src="images/maestro.png">
+                         <img src="images/mastercard.png">
+                         <img src="images/visa.png">
+                         <img src="images/visa2.png">
+                    </div>
+		</div>
+                      <div class="card_details">  
+                    <label><input type="radio" name="sub_type" value="Credit Card"> Mobile Pay</label>
+                    <div class="card">
+                        <img src="images/mobile_pay.png">
+                    </div>
+                    </div>
+<button type="button"> Donate</button>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="donation_login.js"></script>
+
+</body>
+</html

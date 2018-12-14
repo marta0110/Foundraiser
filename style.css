@@ -1,50 +1,562 @@
+<<<<<<< HEAD
+/* Donation system */
+
+.donation_img {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	z-index: -1;
+}
+
+.stretch {
+	width: 100%;
+	height: 100%;
+}
+
+.container,
+.container_one_payment {
+	width: 80vw;
+	height: auto;
+	background-color: #262626;
+	border-radius: 2px;
+	margin-top: 10vh;
+	margin-left: 10vw;
+	position: absolute;
+	z-index: 2;
+	padding-bottom: 3vw;
+}
+
+.container img,
+.container_one_payment img {
+	width: 22vw;
+	height: auto;
+	padding-top: 5vw;
+}
+
+.container h3,
+.container_one_payment h3 {
+	font-family: "Montserrat", "sans-serif";
+	color: white;
+	font-weight: 400;
+	font-size: 5vw;
+	text-align: center;
+	height: 1vh;
+}
+
+.container p,
+.container_one_payment p {
+	font-family: "Raleway", "sans-serif";
+	color: white;
+	font-size: 3.5vw;
+	font-weight: 100;
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 5vh;
+}
+
+.container button,
+.container_one_payment button {
+	border: 5px solid #CE9596;
+	background-color: #262626;
+	width: 80%;
+	font-family: "Raleway", "sans-serif";
+	color: #CE9596;
+	font-size: 5vw;
+	font-weight: 100;
+	margin-bottom: 3vh;
+	text-align: center;
+	margin-left: 10%;
+	cursor: pointer;
+}
+
+.container button:hover,
+.container_one_payment button:hover {
+	background-color: #CE9596;
+	width: 80%;
+	font-family: "Raleway", "sans-serif";
+	font-size: 5vw;
+	font-weight: 100;
+	margin-bottom: 3vh;
+	color: white;
+	text-align: center;
+	margin-left: 10%;
+	cursor: pointer;
+	transition: 0.8s;
+}
+
+.container_one_payment .nav {
+	display: grid;
+	grid-template-columns: 20% 80%;
+}
+
+.container_one_payment p {
+	color: #CE9596;
+	text-decoration: underline;
+	padding-top: 3vh;
+}
+
+.container_one_payment h4 {
+	color: #CE9596;
+	text-decoration: underline;
+	padding-top: 3vh;
+	font-family: "Raleway", "sans-serif";
+	font-size: 4vw;
+	font-weight: 100;
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 5vh;
+}
+
+..container_one_payment .donation_amount {
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
+}
+
+.container_one_payment label {
+	background-color: #CE9596;
+	border-radius: 20px;
+	width: 100%;
+	cursor: pointer;
+	color: white;
+	font-family: "Raleway", "sans-serif";
+	font-size: 3vw;
+	font-weight: 100;
+	padding: 7px;
+	margin-left: 15%;
+	text-align: center;
+	margin-right: 10vw;
+
+}
+
+.container_one_payment label input {
+	margin-bottom: 4vh;
+}
+
+.container_one_payment .donation_amount .enter_amount {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 80%;
+	height: 5vh;
+	align-items: end;
+	margin: 0 auto;
+	margin-bottom: 4vh;
+
+}
+
+.container_one_payment .donation_amount .enter_amount img {
+	width: 8vw;
+
+
+}
+
+.container_one_payment .donation_amount .enter_amount input {
+	background-color: #262626;
+	border: 0;
+	border-bottom: 2px solid white;
+	padding: 0.2em;
+	text-align: center;
+	margin: 0 auto;
+	 transition: border-bottom .35s ease-in-out;
+	color: white;
+}
+
+.container_one_payment .donation_amount .enter_amount input:focus {
+	border-bottom: 2px solid #CE9596;
+	color: #CE9596;
+	
+}
+
+.container_one_payment .donation_amount .enter_amount label:focus {
+	border-bottom: 2px solid #CE9596;
+	color: white;
+}
+
+.container_one_payment .donation_amount .enter_amount p {
+	font-family: "Raleway", "sans-serif";
+	color: white;
+	font-size: 3.5vw;
+	font-weight: 100;
+	text-decoration: none;
+	align-self: end;
+	justify-self: start;
+	margin-bottom: 0;
+
+}
+
+.container_one_payment .card_details {
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 20px;
+	display: grid;
+	grid-template-columns: 40% 55%;
+	cursor: pointer;
+	width: 80%;
+	align-items: end;
+	margin: 0 auto;
+	margin-bottom: 3vh;
+
+}
+
+.container_one_payment .card_details label {
+	font-family: "Raleway", sans-serif;
+	font-weight: 100;
+	font-size: 3vw;
+	padding: 3px;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.0);
+
+
+
+
+
+}
+
+.container_one_payment .card_details .card_visa {
+	align-items: end;
+	place-self: center;
+	justify-self: end;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+
+}
+
+.container_one_payment .card_details .card_visa img {
+	padding-top: 0;
+	width: 20px;
+	height: auto;
+	padding-right: 2px;
+	align-items: end;
+	place-self: center;
+	justify-self: end;
+
+}
+
+.container_one_payment .card_details .card {
+	align-items: end;
+	place-self: center;
+	justify-self: end;
+}
+
+.container_one_payment .card_details .card img {
+	width: 20px;
+	height: auto;
+}
+
+
+
+
+
+@media screen and (min-width: 650px) {
+
+.container_one_payment .donation_amount .enter_amount {
+	
+	margin-bottom: 6vh;
+
+}
+
+
+@media screen and (min-width: 720px) {
+
+	/* Donation system step 1*/
+	.step_1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+	}
+
+	.donation_img {
+		width: 66%;
+		height: 100%;
+		position: fixed;
+		right: 0px;
+		top: 0px;
+		z-index: -1;
+	}
+
+	.stretch {
+		width: 100%;
+		height: 100%;
+	}
+
+	.container {
+		width: 36%;
+		height: 101%;
+		margin-top: -10px;
+		margin-left: -10px;
+		padding-bottom: 0;
+	}
+	
+	.container_one_payment {
+		width: 36%;
+		height: auto;
+		margin-top: -10px;
+		margin-left: -10px;
+		padding-bottom: 10px;
+	}
+
+	.container img,
+	.container_one_payment .nav img {
+		width: 10vw;
+		height: auto;
+		padding-top: 3vw;
+	}
+
+.container img,
+	.container_one_payment .nav p{
+		font-size: 1.5vw;
+	}
+	.container h3,
+	.container_one_payment h3 {
+		font-size: 2.5vw;
+		text-align: center;
+		height: 4vh;
+	}
+
+	.container p,
+	.container_one_payment p {
+		font-size: 2vw;
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 7vh;
+	}
+
+	.container button,
+	.container_one_payment button {
+		font-size: 2vw;
+		padding: 0.5vw;
+	}
+
+
+	.container button:hover,
+	.container_one_payment button:hover {
+		font-size: 2vw;
+	}
+
+
+.container_one_payment h4 {
+	font-size: 2.5vw;
+	
+}
+
+
+.container_one_payment label {
+
+	font-size: 1.5vw;
+	padding: 6px;
+	text-align: center;
+	margin-right: 0;
+
+}
+
+.container_one_payment label input {
+	margin-bottom: 5vh;
+}
+
+.container_one_payment .donation_amount .enter_amount {
+	height: 10vh;
+	margin-top: -5vh;
+}
+
+.container_one_payment .donation_amount .enter_amount img {
+	width: 5vw;
+
+
+}
+
+.container_one_payment .donation_amount .enter_amount p {
+
+	font-size: 2.5vw;
+}
+
+.container_one_payment .card_details {
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 20px;
+	display: grid;
+	grid-template-columns: 45% 55%;
+	cursor: pointer;
+	width: 80%;
+	align-items: center;
+	margin: 0 auto;
+	margin-bottom: 3vh;
+
+}
+
+.container_one_payment .card_details label {
+	font-size: 1.5vw;
+
+}
+
+
+
+.container_one_payment .card_details .card_visa img {
+	padding-top: 0;
+	width: 20px;
+	height: auto;
+	padding-right: 2px;
+	align-items: end;
+	place-self: center;
+	justify-self: end;
+
+}
+
+
+.container_one_payment .card_details .card img {
+	width: 20px;
+	height: auto;
+	padding-right: 15px;
+	padding-top: 0;
+}
+
+
+}
+
+
+@media screen and (min-width: 992px) {
+
+	/* Donation system step 1*/
+	.container img,
+	.container_one_payment img {
+		width: 8vw;
+	}
+
+	.container h3,
+	.container_one_payment h3 {
+		font-size: 2vw;
+	}
+
+	.container_one_payment h4 {
+		font-size: 1vw;
+	}
+
+	.container p,
+	.container_one_payment p {
+		font-size: 1.3vw;
+	}
+
+	.container button,
+	.container_one_payment button {
+		font-size: 1.5vw;
+	}
+
+	.container button:hover,
+	.container_one_payment button:hover {
+		font-size: 1.5vw;
+	}
+
+
+	.container_one_payment .donation_amount .enter_amount {
+	margin-top: -8vh;
+}
+
+.container_one_payment h4 {
+	font-size: 1.8vw;
+	margin-bottom: 3vh;
+	
+}
+	
+.container_one_payment label {
+	font-size: 1.4vw;
+	
+}
+	
+.container_one_payment .donation_amount .enter_amount img {
+	width: 3.5vw;
+	justify-self: center;
+	
+
+
+}
+
+.container_one_payment .donation_amount .enter_amount p {
+
+	font-size: 2vw;
+	justify-self: center;
+}
+
+.container_one_payment .card_details label {
+	font-size: 1.2vw;
+	 align-self: center;
+	padding: 10px;
+
+}
+	.container_one_payment .card_details label input{
+		 align-self: center;
+		margin-bottom: 0;
+	}
+
+}
+
+
+
+
+.login {
+	width: 40vw;
+	height: auto;
+	margin: 0 auto;
+	background-color: blue;
+	padding: 20px;
+=======
 .login{
     width: 40vw;
     height: auto;
     margin: 0 auto;
     background-color: blue;
     padding: 20px;
+>>>>>>> parent of 09f2dbd... donate - logn page rwd
 }
 
-.form{
-    position: relative;
-    z-index: 1;
-    background: rgba(7, 40, 195 0.8);
-    max-width: 40vw;
-    margin: 0;
-    text-align: center;
-    padding: 20px;
-    
+.form {
+	position: relative;
+	z-index: 1;
+	background: rgba(7, 40, 195 0.8);
+	max-width: 40vw;
+	margin: 0;
+	text-align: center;
+	padding: 20px;
+
 }
 
-form input{
-    font-family: "Roboto", "sans-serif";
-    outline: 1;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    
-    
+form input {
+	font-family: "Roboto", "sans-serif";
+	outline: 1;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+
+
 }
 
-form button{
-    background-color: dodgerblue;
-    width: 100%;
-    border: 0;
-    padding: 10px;
+form button {
+	background-color: dodgerblue;
+	width: 100%;
+	border: 0;
+	padding: 10px;
 }
 
-form button:hover, form button:active{
-    background-color: yellow;
+form button:hover,
+form button:active {
+	background-color: yellow;
 }
 
-form .message a{
-    text-decoration: none;
-    color: white;
+form .message a {
+	text-decoration: none;
+	color: white;
 }
 
+<<<<<<< HEAD
+.form .register-form {
+	display: none;
+}
+=======
 .form .register-form{
     display: none;
 }
+>>>>>>> parent of 09f2dbd... donate - logn page rwd
